@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgc83n6vdiu53"]
+
+[ext_resource type="Script" path="res://scenes/game/DanmuManager.gd" id="1_rvk04"]
+[ext_resource type="Resource" uid="uid://baisny2etcnin" path="res://resources/levels/danmu/danmu_list_1.tres" id="2_8axal"]
+
+[node name="Danmu" type="Node2D"]
+script = ExtResource("1_rvk04")
+danmu_list = ExtResource("2_8axal")

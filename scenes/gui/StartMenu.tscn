@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://c603xuwbj0p1i"]
+
+[ext_resource type="Script" path="res://scenes/gui/StartMenu.cs" id="1_a0cju"]
+[ext_resource type="Texture2D" uid="uid://dcttdhwonknuh" path="res://resources/pictures/backgrounds/title_bg.png" id="1_ohorr"]
+[ext_resource type="Theme" uid="uid://wo1wq8mij2xp" path="res://resources/themes/default_text_theme.tres" id="2_hhplf"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a0cju")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Background"]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+offset_right = 1200.0
+offset_bottom = 900.0
+texture = ExtResource("1_ohorr")
+expand_mode = 1
+
+[node name="Button" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button"]
+offset_left = 7.0
+offset_top = 408.0
+offset_right = 240.0
+offset_bottom = 640.0
+
+[node name="GameStart" type="Button" parent="Button/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hhplf")
+theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 32
+text = "Game Start"
+alignment = 0
+
+[node name="PracticeStart" type="Button" parent="Button/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hhplf")
+theme_type_variation = &"FlatButton"
+text = "Practice Start"
+alignment = 0
+
+[node name="Option" type="Button" parent="Button/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hhplf")
+theme_type_variation = &"FlatButton"
+text = "Option
+"
+alignment = 0
+
+[node name="Quit" type="Button" parent="Button/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hhplf")
+theme_type_variation = &"FlatButton"
+text = "Quit
+"
+alignment = 0
+
+[connection signal="pressed" from="Button/VBoxContainer/GameStart" to="." method="OnGameStartBtnPressed"]

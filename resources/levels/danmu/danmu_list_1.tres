@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="DanmuGroup" load_steps=7 format=3 uid="uid://baisny2etcnin"]
+
+[ext_resource type="Script" path="res://scenes/game/danmu/LinearDanmu.gd" id="1_6r1u4"]
+[ext_resource type="Script" path="res://scenes/game/danmu/DanmuGroup.gd" id="1_dqnnq"]
+
+[sub_resource type="Resource" id="Resource_ftp12"]
+script = ExtResource("1_6r1u4")
+start_point = Vector2(0, 500)
+end_point = Vector2(600, 500)
+speed = 400
+vertices = PackedVector2Array(0, 0, 0, 100, 100, 100, 100, 0)
+color = Color(0, 0, 0, 1)
+exist_time = 1.0
+delay_time = 0.5
+
+[sub_resource type="Resource" id="Resource_mx4mr"]
+script = ExtResource("1_6r1u4")
+start_point = Vector2(600, 500)
+end_point = Vector2(0, 500)
+speed = 400
+vertices = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+color = Color(0, 0, 0, 1)
+exist_time = 1.0
+delay_time = 0.5
+
+[sub_resource type="Resource" id="Resource_3jlc4"]
+script = ExtResource("1_6r1u4")
+start_point = Vector2(0, 300)
+end_point = Vector2(600, 300)
+speed = 400
+vertices = PackedVector2Array(0, 0, 0, 100, 100, 100, 100, 0)
+color = Color(0, 0, 0, 1)
+exist_time = 1.0
+delay_time = 0.5
+
+[sub_resource type="Resource" id="Resource_us8gq"]
+script = ExtResource("1_6r1u4")
+start_point = Vector2(600, 300)
+end_point = Vector2(0, 300)
+speed = 400
+vertices = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+color = Color(0, 0, 0, 1)
+exist_time = 1.0
+delay_time = 0.5
+
+[resource]
+script = ExtResource("1_dqnnq")
+danmu_list = Array[Resource("res://scenes/game/danmu/BaseDanmu.gd")]([SubResource("Resource_ftp12"), SubResource("Resource_mx4mr"), SubResource("Resource_3jlc4"), SubResource("Resource_us8gq")])
