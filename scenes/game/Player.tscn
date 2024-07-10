@@ -7,6 +7,8 @@
 radius = 14.0
 
 [node name="Player" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_86inf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -16,3 +18,5 @@ texture = ExtResource("1_lphlm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_jnfkp")
+
+[connection signal="area_entered" from="." to="." method="OnAreaEntered"]

@@ -20,6 +20,8 @@ func display_next_danmu():
 	shape.color = current_danmu.color
 	shape.polygon = current_danmu.vertices
 	collision_shape.polygon = current_danmu.vertices
+	danmu.collision_layer = 3
+	danmu.collision_mask = 2
 	
 	# 设置下一次“发射”子弹的间隔
 	var delay_timer := get_tree().create_timer(current_danmu.delay_time)

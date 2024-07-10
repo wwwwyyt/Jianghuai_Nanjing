@@ -14,12 +14,14 @@ script = ExtResource("1_qtmj0")
 offset_right = 1200.0
 offset_bottom = 900.0
 color = Color(0.0431373, 0.215686, 0.470588, 1)
+metadata/_edit_lock_ = true
 
 [node name="VBoxContainer_1" type="VBoxContainer" parent="HUD"]
 offset_left = 856.0
 offset_top = 64.0
 offset_right = 981.0
 offset_bottom = 315.0
+metadata/_edit_lock_ = true
 
 [node name="SCORE" type="Label" parent="HUD/VBoxContainer_1"]
 layout_mode = 2
@@ -51,6 +53,7 @@ offset_left = 856.0
 offset_top = 560.0
 offset_right = 1058.0
 offset_bottom = 833.0
+metadata/_edit_lock_ = true
 
 [node name="LOCATION" type="Label" parent="HUD/VBoxContainer_2"]
 layout_mode = 2
@@ -79,26 +82,26 @@ theme = ExtResource("1_shmk1")
 theme_override_font_sizes/font_size = 20
 text = "60.0 fps"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="PlayArea" type="CanvasLayer" parent="."]
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="PlayArea"]
 offset_left = 96.0
 offset_top = 40.0
 offset_right = 796.0
 offset_bottom = 840.0
-metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="PlayArea/SubViewportContainer"]
 handle_input_locally = false
 size = Vector2i(700, 800)
 render_target_update_mode = 4
 
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/SubViewportContainer/SubViewport"]
+[node name="ColorRect2" type="ColorRect" parent="PlayArea/SubViewportContainer/SubViewport"]
 offset_right = 700.0
 offset_bottom = 800.0
 color = Color(0.930711, 0.88535, 0.907677, 1)
 
-[node name="Danmu" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("2_w1e0y")]
+[node name="Danmu" parent="PlayArea/SubViewportContainer/SubViewport" instance=ExtResource("2_w1e0y")]
 
-[node name="Player" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("2_7ynf2")]
+[node name="Player" parent="PlayArea/SubViewportContainer/SubViewport/Danmu" instance=ExtResource("2_7ynf2")]
 position = Vector2(350, 700)

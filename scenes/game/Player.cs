@@ -53,4 +53,13 @@ public partial class Player : Area2D
             y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y)
         );
     }
+
+    // 处理玩家被子弹击中
+    private void OnAreaEntered(Area2D area)
+    {
+        GD.Print("OnAreaEntered");
+        Hide();
+        //使用SetDeferred安全地禁用玩家的碰撞检测
+        GetNode<CollisionShape2D>("CollisionShape2D").SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
+    }
 }

@@ -30,6 +30,12 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="2-4 江淮project - 南京"
 
+[layer_names]
+
+2d_physics/layer_1="Wall"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemy"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
